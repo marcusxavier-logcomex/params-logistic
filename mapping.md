@@ -19,3 +19,4 @@ Layers TEUS:
 Layers Operacao:
 2440 -> ranking de transportista
 2445 -> ranking de transportista no tempo
+2449 -> ranking de importador
