@@ -9,10 +9,12 @@ Layers Peso:
 Layers FOB:
 2438 -> ranking de transportista
 2443 -> ranking de transportista no tempo
+2447 -> ranking de importador
 
 Layers TEUS:
 2439 -> ranking de transportista
 2444 -> ranking de transportista no tempo
+2448 -> ranking de importador
 
 Layers Operacao:
 2440 -> ranking de transportista
