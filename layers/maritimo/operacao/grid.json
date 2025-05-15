@@ -1,0 +1,56 @@
+[
+  {
+    "grid": {
+      "w": 6,
+      "x": 0,
+      "y": 0
+    },
+    "chart_id": "2441",
+    "cellHeight": "200px",
+    "chart_type_name": "GeneralChart"
+  },
+  {
+    "grid": {
+      "h": 3,
+      "w": 6,
+      "x": 0,
+      "y": 1
+    },
+    "chart_id": "2449",
+    "cellHeight": "600px",
+    "chart_type_name": "LineChart"
+  },
+  {
+    "grid": {
+      "h": 3,
+      "w": 6,
+      "x": 0,
+      "y": 4
+    },
+    "chart_id": "2440",
+    "cellHeight": "600px",
+    "chart_type_name": "LineChart"
+  },
+  {
+    "grid": {
+      "h": 3,
+      "w": 6,
+      "x": 6,
+      "y": 4
+    },
+    "chart_id": "2445",
+    "cellHeight": "600px",
+    "chart_type_name": "DateLineChart"
+  },
+  {
+    "grid": {
+      "h": 1,
+      "w": 12,
+      "x": 0,
+      "y": 7
+    },
+    "chart_id": "2678",
+    "cellHeight": "420px",
+    "chart_type_name": "HorizontalBarChart"
+  }
+]
