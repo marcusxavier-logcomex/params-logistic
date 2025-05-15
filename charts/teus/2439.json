@@ -13,11 +13,11 @@
   ],
   "fields": [
     "transport_company_name",
-    "departure_goods_usd_value"
+    "teus_qty"
   ],
   "group_by": [
     {
-      "field": "departure_goods_usd_value",
+      "field": "teus_qty",
       "aggregation": "sum"
     }
   ],
@@ -30,7 +30,7 @@
   },
   "chart_bind": {
     "main_label": "data/transport_company_name",
-    "progress_bar": "data/transport_company_name__departure_goods_usd_value__percentage",
+    "progress_bar": "data/transport_company_name__teus_qty__percentage",
     "quick_filter": "paramsdata/quickFilter/transport_company_name",
     "others_action": "translation/seeMore",
     "column_ranking": "data/transport_company_name__ranking",
@@ -38,8 +38,8 @@
     "others_main_value": "summary/remaining/count",
     "full_list_column_1": "data/index",
     "full_list_column_2": "data/transport_company_name",
-    "full_list_column_3": "data/transport_company_name__departure_goods_usd_value",
-    "full_list_column_4": "data/transport_company_name__departure_goods_usd_value__percentage",
+    "full_list_column_3": "data/transport_company_name__teus_qty",
+    "full_list_column_4": "data/transport_company_name__teus_qty__percentage",
     "full_list_header_1": "translation/header1",
     "full_list_header_2": "translation/header2",
     "full_list_header_3": "translation/header3",
@@ -48,15 +48,15 @@
     "full_list_reorder_3": "reorderFields/aggregation",
     "full_list_tooltip_1": "translation/tooltip_1",
     "full_list_tooltip_4": "translation/tooltip_4",
-    "others_progress_bar": "summary/remaining/transport_company_name__departure_goods_usd_value__percentage",
+    "others_progress_bar": "summary/remaining/transport_company_name__teus_qty__percentage",
     "additional_info_label_1": "translation/firstColumn",
     "additional_info_label_2": "translation/secondColumn",
-    "additional_info_value_1": "data/transport_company_name__departure_goods_usd_value",
-    "additional_info_value_2": "data/transport_company_name__departure_goods_usd_value__percentage",
+    "additional_info_value_1": "data/transport_company_name__teus_qty",
+    "additional_info_value_2": "data/transport_company_name__teus_qty__percentage",
     "others_additional_info_label_1": "translation/firstColumn",
     "others_additional_info_label_2": "translation/secondColumn",
     "others_additional_info_value_1": "summary/remaining/transport_company_name__count",
-    "others_additional_info_value_2": "summary/remaining/transport_company_name__departure_goods_usd_value__percentage"
+    "others_additional_info_value_2": "summary/remaining/transport_company_name__teus_qty__percentage"
   },
   "shard_size": 10,
   "treatItems": {
@@ -116,9 +116,9 @@
       "pt": "Ranking de Transportador"
     },
     "value": {
-      "en": "FOB (USD)",
-      "es": "FOB (USD)",
-      "pt": "FOB (USD)"
+      "en": "TEUS",
+      "es": "TEUS",
+      "pt": "TEUS"
     },
     "others": {
       "en": "OTHERS",
@@ -136,19 +136,19 @@
       "pt": "Empresas"
     },
     "header3": {
-      "en": "FOB (USD)",
-      "es": "FOB (USD)",
-      "pt": "FOB (USD)"
+      "en": "TEUS",
+      "es": "TEUS",
+      "pt": "TEUS"
     },
     "header4": {
-      "en": "FOB Share (USD)",
-      "es": "Participación de FOB (USD)",
-      "pt": "Share de FOB (USD)"
+      "en": "TEUS Share",
+      "pt": "Share de TEUS",
+      "es": "Participación de TEUS"
     },
     "records": {
-      "en": "FOB Share (USD)",
-      "es": "Participación de FOB (USD)",
-      "pt": "Share de FOB (USD)"
+      "en": "Weight Share",
+      "pt": "Share de Peso",
+      "es": "Participación de Peso"
     },
     "seeMore": {
       "en": "View more",
@@ -156,9 +156,9 @@
       "pt": "Ver mais"
     },
     "subtitle": {
-      "en": "Transporters with the highest FOB (USD) exported for your research",
-      "es": "Transportistas con mayor FOB (USD) para su búsqueda",
-      "pt": "Transportadores com maior FOB (USD) para sua pesquisa"
+      "en": "Transporters with the highest number of TEUS exported for your research",
+      "es": "Transportistas con mayor número de TEUS para su búsqueda",
+      "pt": "Transportadores com maior número de TEUS para sua pesquisa"
     },
     "tooltip_1": {
       "en": "Regarding the applied filter",
@@ -171,9 +171,9 @@
       "pt": "Em relação ao filtro aplicado"
     },
     "firstColumn": {
-      "en": "FOB (USD): ",
-      "es": "FOB (USD): ",
-      "pt": "FOB (USD): "
+      "en": "TEUS: ",
+      "es": "TEUS: ",
+      "pt": "TEUS: "
     },
     "othersAction": {
       "en": "Hide",
@@ -181,9 +181,9 @@
       "pt": "Recolher"
     },
     "secondColumn": {
-      "en": "Weight Share (USD): ",
-      "es": "Participación de FOB (USD): ",
-      "pt": "Share de FOB (USD): "
+      "en": "TEUS Share: ",
+      "pt": "Share de TEUS: ",
+      "es": "Participación de TEUS: "
     },
     "othersMainLabel": {
       "en": "Others",
@@ -200,7 +200,7 @@
     {
       "field": "transport_company_name.keyword",
       "order_by": {
-        "departure_goods_usd_value": "desc"
+        "teus_qty": "desc"
       },
       "aggregation": "terms"
     }
@@ -220,7 +220,7 @@
       "sum",
       "count"
     ],
-    "dynamic_field_1": "departure_goods_usd_value",
+    "dynamic_field_1": "teus_qty",
     "dynamic_groupby_1": "transport_company_name"
   },
   "customerRanking": false,
@@ -230,7 +230,7 @@
       "transport_company_name"
     ],
     "aggregation": [
-      "departure_goods_usd_value"
+      "teus_qty"
     ]
   },
   "full_list_params": {
@@ -240,7 +240,7 @@
     "textFilterParams": {
       "groupBy": "transport_company_name",
       "ruleType": "prefix",
-      "aggregateBy": "departure_goods_usd_value",
+      "aggregateBy": "teus_qty",
       "placeholder": {
         "en": "Search for...",
         "es": "Buscar por...",
@@ -250,13 +250,13 @@
     },
     "rangeFilterParams": {
       "title": {
-        "en": "Total of FOB (USD)",
-        "es": "Total de FOB (USD)",
-        "pt": "Total de FOB (USD)"
+        "en": "Total of TEUS",
+        "pt": "Total de TEUS",
+        "es": "Total de TEUS"
       },
       "groupBy": "transport_company_name",
       "ruleType": "range",
-      "aggregateBy": "departure_goods_usd_value",
+      "aggregateBy": "teus_qty",
       "overrideSize": 100000
     }
   },
