@@ -1,0 +1,143 @@
+[
+  {
+    "grid": {
+      "w": 6,
+      "x": 0,
+      "y": 0
+    },
+    "chart_id": "2111",
+    "cellHeight": "210px",
+    "chart_type_name": "GeneralChart"
+  },
+  {
+    "grid": {
+      "w": 6,
+      "x": 6,
+      "y": 0
+    },
+    "chart_id": "2112",
+    "cellHeight": "210px",
+    "chart_type_name": "GeneralChart"
+  },
+  {
+    "grid": {
+      "h": 3,
+      "w": 12,
+      "x": 0,
+      "y": 3
+    },
+    "chart_id": "2399",
+    "cellHeight": "600px",
+    "chart_type_name": "PartitionedBarChartAm"
+  },
+  {
+    "grid": {
+      "h": 2,
+      "w": 12,
+      "x": 0,
+      "y": 6
+    },
+    "chart_id": "2429",
+    "cellHeight": "400px",
+    "chart_type_name": "AnnualLineChartV2"
+  },
+  {
+    "grid": {
+      "h": 3,
+      "w": 6,
+      "x": 0,
+      "y": 8
+    },
+    "chart_id": "2314",
+    "cellHeight": "600px",
+    "chart_type_name": "LineChart"
+  },
+  {
+    "grid": {
+      "h": 3,
+      "w": 6,
+      "x": 6,
+      "y": 11
+    },
+    "chart_id": "2316",
+    "cellHeight": "560px",
+    "chart_type_name": "DateLineChart"
+  },
+  {
+    "grid": {
+      "h": 3,
+      "w": 6,
+      "x": 0,
+      "y": 11
+    },
+    "chart_id": "2315",
+    "cellHeight": "600px",
+    "chart_type_name": "LineChart"
+  },
+  {
+    "grid": {
+      "h": 3,
+      "w": 6,
+      "x": 6,
+      "y": 15
+    },
+    "chart_id": "2317",
+    "cellHeight": "560px",
+    "chart_type_name": "DateLineChart"
+  },
+  {
+    "grid": {
+      "h": 3,
+      "w": 6,
+      "x": 0,
+      "y": 21
+    },
+    "chart_id": "2424",
+    "cellHeight": "560px",
+    "chart_type_name": "LineChart"
+  },
+  {
+    "grid": {
+      "h": 3,
+      "w": 6,
+      "x": 6,
+      "y": 21
+    },
+    "chart_id": "2425",
+    "cellHeight": "560px",
+    "chart_type_name": "DateLineChart"
+  },
+  {
+    "grid": {
+      "h": 3,
+      "w": 12,
+      "x": 0,
+      "y": 24
+    },
+    "chart_id": "2390",
+    "cellHeight": "600px",
+    "chart_type_name": "HeatMap"
+  },
+  {
+    "grid": {
+      "h": 1,
+      "w": 6,
+      "x": 0,
+      "y": 27
+    },
+    "chart_id": "2403",
+    "cellHeight": "420px",
+    "chart_type_name": "RouteChart"
+  },
+  {
+    "grid": {
+      "h": 1,
+      "w": 6,
+      "x": 6,
+      "y": 27
+    },
+    "chart_id": "2386",
+    "cellHeight": "420px",
+    "chart_type_name": "CircleChart"
+  }
+]
