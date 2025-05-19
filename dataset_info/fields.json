@@ -188,7 +188,7 @@
     "workspace": false
   },
   {
-    "name": "hscode",
+    "name": "departure_hscodes",
     "label": {
       "en": "HS Code",
       "pt": "HS Code",
@@ -222,7 +222,7 @@
     "workspace": false
   },
   {
-    "name": "gross_weight",
+    "name": "departure_gross_weight",
     "label": {
       "en": "Weight (KG)",
       "pt": "Peso (KG)",
@@ -239,7 +239,7 @@
     "workspace": true
   },
   {
-    "name": "usd_value",
+    "name": "departure_goods_usd_value",
     "label": {
       "en": "Value (USD)",
       "pt": "Valor (USD)",
@@ -814,7 +814,7 @@
     "elastic_rule": ".keyword",
     "type": "string",
     "show": "true",
-    "workspace": true
+    "workspace": false
   },
   {
     "name": "export_taxes_percent",
@@ -1187,6 +1187,57 @@
     "used_on_charts": true,
     "elastic_rule": ".keyword",
     "type": "string",
+    "show": "true",
+    "workspace": false
+  },
+  {
+    "name": "transport_company_name",
+    "label": {
+      "pt": "Transportador",
+      "en": "Transporter",
+      "es": "Transportista"
+    },
+    "description": "Nome da empresa de transporte",
+    "used_on_side_filter": [],
+    "used_on_details": true,
+    "used_on_excel": true,
+    "used_on_charts": true,
+    "elastic_rule": ".keyword",
+    "type": "string",
+    "show": "true",
+    "workspace": true
+  },
+  {
+    "name": "container_type",
+    "label": {
+      "pt": "Tipo de Carga Padronizada",
+      "en": "Container Type",
+      "es": "Tipo de Carga Padronizada"
+    },
+    "description": "Tipo de Carga Padronizada",
+    "used_on_side_filter": [],
+    "used_on_details": true,
+    "used_on_excel": true,
+    "used_on_charts": true,
+    "elastic_rule": ".keyword",
+    "type": "string",
+    "show": "true",
+    "workspace": true
+  },
+  {
+    "name": "teus_qty",
+    "label": {
+      "pt": "Quantidade TEUS",
+      "en": "TEUS Quantity",
+      "es": "Cantidad TEUS"
+    },
+    "description": "Quantidade TEUS",
+    "used_on_side_filter": [],
+    "used_on_details": true,
+    "used_on_excel": true,
+    "used_on_charts": true,
+    "elastic_rule": "",
+    "type": "number",
     "show": "true",
     "workspace": true
   }
