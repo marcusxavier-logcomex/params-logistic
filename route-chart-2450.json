@@ -49,7 +49,7 @@
     "full_list_header_4": "translation/header_3",
     "full_list_header_5": "translation/header_4",
     "full_list_tooltip_1": "translation/tooltip_1",
-    "column_1_tooltipLabel": "translation/weight",
+    "column_1_tooltipLabel": "translation/embarques",
     "column_1_tooltipValue": "data/count__sum",
     "footer_1_tooltipLabel": "translation/footerLabel",
     "footer_1_tooltipValue": "summary/remaining/count__sum",
@@ -59,11 +59,11 @@
   "max_results": 10000,
   "translation": {
     "title": {
-      "en": "Origin and Acquisition Country",
-      "es": "Países de Origen y Compra",
-      "pt": "Pais de Origem e Procedência"
+      "en": "Tradeline",
+      "es": "Línea comercial",
+      "pt": "Linha Comercial"
     },
-    "weight": {
+    "embarques": {
       "en": "FOB (USD): ",
       "es": "FOB (USD): ",
       "pt": "FOB (USD): "
@@ -89,9 +89,9 @@
       "pt": "País de Procedência"
     },
     "header_4": {
-      "en": "FOB (USD)",
-      "es": "FOB (USD)",
-      "pt": "FOB (USD)"
+      "en": "Entry Customs",
+      "es": "Aduana de Entrada",
+      "pt": "Aduana de Entrada"
     },
     "header_5": {
       "en": "Percentage",
@@ -104,9 +104,9 @@
       "pt": "Posição"
     },
     "subtitle": {
-      "en": "Routes of country of origin and acquisition with the respective average FOB (USD) value",
-      "es": "Rutas de país de origen y procedencia con el respectivo valor medio de FOB (USD)",
-      "pt": "Rotas de País de origem e procedência com o respectivo valor médio de FOB (USD)"
+      "en": "Most used routes per shipments quantity for your search",
+      "es": "Rutas más utilizadas por cantidad de operaciones en el período investigado",
+      "pt": "Rotas mais utilizadas por quantidade de operações no período pesquisado"
     },
     "tooltip_1": {
       "en": "Regarding the applied filter",
@@ -155,6 +155,7 @@
     ]
   },
   "showDynamicField": true,
+  "chart_type_name": "route-chart",
   "displayedItemsSize": 5,
   "chart_bind_processors": {
     "column_1": "includes/end/%",
