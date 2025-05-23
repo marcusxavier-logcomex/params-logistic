@@ -11,14 +11,47 @@
   },
   {
     "grid": {
-      "h": 3,
+      "h": 1,
       "w": 6,
       "x": 0,
       "y": 1
     },
-    "chart_id": "2447",
+    "chart_id": "2684",
+    "cellHeight": "150px",
+    "chart_type_name": "BoardChartPercentage"
+  },
+  {
+    "grid": {
+      "h": 1,
+      "w": 3,
+      "x": 3,
+      "y": 2
+    },
+    "chart_id": "2679",
+    "cellHeight": "50px",
+    "chart_type_name": "GeneralChartCentralizedValue"
+  },
+  {
+    "grid": {
+      "h": 1,
+      "w": 3,
+      "x": 0,
+      "y": 2
+    },
+    "chart_id": "2680",
+    "cellHeight": "50px",
+    "chart_type_name": "GeneralChartCentralizedValue"
+  },
+  {
+    "grid": {
+      "h": 3,
+      "w": 12,
+      "x": 0,
+      "y": 3
+    },
+    "chart_id": "2685",
     "cellHeight": "600px",
-    "chart_type_name": "LineChart"
+    "chart_type_name": "HeatMap"
   },
   {
     "grid": {
@@ -27,7 +60,7 @@
       "x": 0,
       "y": 4
     },
-    "chart_id": "2438",
+    "chart_id": "2447",
     "cellHeight": "600px",
     "chart_type_name": "LineChart"
   },
@@ -38,8 +71,30 @@
       "x": 6,
       "y": 4
     },
+    "chart_id": "2438",
+    "cellHeight": "600px",
+    "chart_type_name": "LineChart"
+  },
+  {
+    "grid": {
+      "h": 3,
+      "w": 6,
+      "x": 0,
+      "y": 7
+    },
     "chart_id": "2443",
     "cellHeight": "600px",
     "chart_type_name": "DateLineChart"
+  },
+  {
+    "grid": {
+      "h": 1,
+      "w": 12,
+      "x": 0,
+      "y": 10
+    },
+    "chart_id": "2451",
+    "cellHeight": "420px",
+    "chart_type_name": "RouteChart"
   }
 ]
