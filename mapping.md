@@ -17,8 +17,10 @@ Layers TEUS:
 2439 -> ranking de transportista
 2444 -> ranking de transportista no tempo
 2448 -> ranking de importador
+2452 -> Linea comercial
 
 Layers Operacao:
 2440 -> ranking de transportista
 2445 -> ranking de transportista no tempo
 2449 -> ranking de importador
+2453 -> Linea comercial
