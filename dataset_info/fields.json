@@ -321,7 +321,7 @@
     "elastic_rule": ".keyword",
     "type": "string",
     "show": "true",
-    "workspace": true
+    "workspace": false
   },
   {
     "name": "declaration_number",
@@ -474,7 +474,7 @@
     "elastic_rule": ".keyword",
     "type": "string",
     "show": "true",
-    "workspace": true
+    "workspace": false
   },
   {
     "name": "dispatch_customs",

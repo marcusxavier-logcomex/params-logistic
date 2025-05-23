@@ -89,6 +89,28 @@
     {
       "translation": {
         "title": {
+          "pt": "HS Code",
+          "en": "HS Code",
+          "es": "Fracción Arrancelaria | HS Code"
+        }
+      },
+      "type": "multiple-text-filter",
+      "expanded": false,
+      "fields": [
+        {
+          "dataset_bind": "departure_hscodes",
+          "uppercase_value": false,
+          "rule": "contains",
+          "rule_type": "prefix",
+          "elastic_rule": ".keyword",
+          "flags": [],
+          "keysBeforeSearch": 2
+        }
+      ]
+    },
+    {
+      "translation": {
+        "title": {
           "pt": "Período",
           "en": "Period",
           "es": "Período"
@@ -142,200 +164,6 @@
         {
           "dataset_bind": "dispatch_customs",
           "uppercase_value": true,
-          "rule": "contains",
-          "rule_type": "prefix",
-          "elastic_rule": ".keyword",
-          "flags": []
-        }
-      ]
-    },
-    {
-      "translation": {
-        "title": {
-          "pt": "HS Code",
-          "en": "HS Code",
-          "es": "Fracción Arrancelaria | HS Code"
-        }
-      },
-      "type": "autocomplete-multiple",
-      "expanded": false,
-      "fields": [
-        {
-          "dataset_bind": "hs10",
-          "uppercase_value": false,
-          "rule": "contains",
-          "rule_type": "prefix",
-          "elastic_rule": ".keyword",
-          "flags": []
-        }
-      ],
-      "tooltipData": {
-        "es": "De 4 a 10 dígitos",
-        "pt": "De 4 a 10 dígitos",
-        "en": "From 4 to 10 digits"
-      }
-    },
-    {
-      "translation": {
-        "title": {
-          "pt": "Descrição da Mercadoria",
-          "en": "Product Description",
-          "es": "Descripción del Producto"
-        }
-      },
-      "type": "multiple-text-filter",
-      "expanded": false,
-      "fields": [
-        {
-          "dataset_bind": "goods_full_description_es",
-          "uppercase_value": false,
-          "rule": "contains",
-          "rule_type": "match_phrase",
-          "elastic_rule": "",
-          "flags": []
-        }
-      ]
-    },
-    {
-      "translation": {
-        "title": {
-          "pt": "Importador",
-          "en": "Consignee",
-          "es": "Importador"
-        }
-      },
-      "type": "autocomplete-multiple",
-      "expanded": false,
-      "fields": [
-        {
-          "dataset_bind": "importer_name",
-          "uppercase_value": true,
-          "rule": "contains",
-          "rule_type": "prefix",
-          "elastic_rule": ".keyword",
-          "flags": []
-        }
-      ]
-    },
-    {
-      "translation": {
-        "title": {
-          "pt": "RFC",
-          "en": "RFC",
-          "es": "RFC"
-        }
-      },
-      "type": "autocomplete-multiple",
-      "expanded": false,
-      "fields": [
-        {
-          "dataset_bind": "importer_id",
-          "uppercase_value": true,
-          "rule": "contains",
-          "rule_type": "prefix",
-          "elastic_rule": ".keyword",
-          "flags": []
-        }
-      ]
-    },
-    {
-      "translation": {
-        "title": {
-          "pt": "Exportador ",
-          "en": "Exporter",
-          "es": "Exportador"
-        }
-      },
-      "type": "autocomplete-multiple",
-      "expanded": false,
-      "fields": [
-        {
-          "dataset_bind": "supplier_name",
-          "uppercase_value": true,
-          "rule": "contains",
-          "rule_type": "prefix",
-          "elastic_rule": ".keyword",
-          "flags": []
-        }
-      ]
-    },
-    {
-      "translation": {
-        "title": {
-          "pt": "Patente Aduanal",
-          "en": "Customs Broker",
-          "es": "Patente Aduanal"
-        }
-      },
-      "type": "autocomplete-multiple",
-      "expanded": false,
-      "fields": [
-        {
-          "dataset_bind": "custom_broker_id",
-          "uppercase_value": true,
-          "rule": "contains",
-          "rule_type": "prefix",
-          "elastic_rule": ".keyword",
-          "flags": []
-        }
-      ]
-    },
-    {
-      "translation": {
-        "title": {
-          "pt": "Pais de Origem",
-          "en": "Origin Country",
-          "es": "País de Origen"
-        }
-      },
-      "type": "autocomplete-multiple",
-      "expanded": false,
-      "fields": [
-        {
-          "dataset_bind": "origin_destination_country",
-          "uppercase_value": true,
-          "rule": "contains",
-          "rule_type": "prefix",
-          "elastic_rule": ".keyword",
-          "flags": []
-        }
-      ]
-    },
-    {
-      "translation": {
-        "title": {
-          "pt": "País de Procedência",
-          "en": "Acquisition Country",
-          "es": "País de Procedencia"
-        }
-      },
-      "type": "autocomplete-multiple",
-      "expanded": false,
-      "fields": [
-        {
-          "dataset_bind": "buyer_seller_country",
-          "uppercase_value": true,
-          "rule": "contains",
-          "rule_type": "prefix",
-          "elastic_rule": ".keyword",
-          "flags": []
-        }
-      ]
-    },
-    {
-      "translation": {
-        "title": {
-          "pt": "Pedimento",
-          "en": "Pedimento",
-          "es": "Pedimento"
-        }
-      },
-      "type": "multiple-text-filter",
-      "expanded": false,
-      "fields": [
-        {
-          "dataset_bind": "declaration_number",
-          "uppercase_value": false,
           "rule": "contains",
           "rule_type": "prefix",
           "elastic_rule": ".keyword",
@@ -401,6 +229,195 @@
           },
           "flags": [],
           "elastic_rule": ".keyword"
+        }
+      ]
+    },
+    {
+      "translation": {
+        "title": {
+          "pt": "Transportador",
+          "en": "Transporter",
+          "es": "Transportista"
+        }
+      },
+      "type": "multiple-text-filter",
+      "expanded": false,
+      "fields": [
+        {
+          "dataset_bind": "transport_company_name",
+          "uppercase_value": false,
+          "rule": "contains",
+          "rule_type": "prefix",
+          "elastic_rule": ".keyword",
+          "flags": []
+        }
+      ]
+    },
+    {
+      "translation": {
+        "title": {
+          "pt": "Tipo de Embarque",
+          "en": "Tipo de Embarque",
+          "es": "Shipment Type"
+        }
+      },
+      "type": "multiple-text-filter",
+      "expanded": false,
+      "fields": [
+        {
+          "dataset_bind": "shipment_type",
+          "uppercase_value": false,
+          "rule": "contains",
+          "rule_type": "prefix",
+          "elastic_rule": ".keyword",
+          "flags": []
+        }
+      ]
+    },
+    {
+      "translation": {
+        "title": {
+          "pt": "RFC",
+          "en": "RFC",
+          "es": "RFC"
+        }
+      },
+      "type": "autocomplete-multiple",
+      "expanded": false,
+      "fields": [
+        {
+          "dataset_bind": "importer_id",
+          "uppercase_value": true,
+          "rule": "contains",
+          "rule_type": "prefix",
+          "elastic_rule": ".keyword",
+          "flags": []
+        }
+      ]
+    },
+    {
+      "translation": {
+        "title": {
+          "pt": "Exportador ",
+          "en": "Exporter",
+          "es": "Exportador"
+        }
+      },
+      "type": "autocomplete-multiple",
+      "expanded": false,
+      "fields": [
+        {
+          "dataset_bind": "supplier_name",
+          "uppercase_value": true,
+          "rule": "contains",
+          "rule_type": "prefix",
+          "elastic_rule": ".keyword",
+          "flags": []
+        }
+      ]
+    },
+    {
+      "translation": {
+        "title": {
+          "pt": "Importador",
+          "en": "Consignee",
+          "es": "Importador"
+        }
+      },
+      "type": "autocomplete-multiple",
+      "expanded": false,
+      "fields": [
+        {
+          "dataset_bind": "importer_name",
+          "uppercase_value": true,
+          "rule": "contains",
+          "rule_type": "prefix",
+          "elastic_rule": ".keyword",
+          "flags": []
+        }
+      ]
+    },
+    {
+      "translation": {
+        "title": {
+          "pt": "Patente Aduanal",
+          "en": "Customs Broker",
+          "es": "Patente Aduanal"
+        }
+      },
+      "type": "autocomplete-multiple",
+      "expanded": false,
+      "fields": [
+        {
+          "dataset_bind": "custom_broker_id",
+          "uppercase_value": true,
+          "rule": "contains",
+          "rule_type": "prefix",
+          "elastic_rule": ".keyword",
+          "flags": []
+        }
+      ]
+    },
+    {
+      "translation": {
+        "title": {
+          "pt": "Pais de Origem",
+          "en": "Origin Country",
+          "es": "País de Origen"
+        }
+      },
+      "type": "autocomplete-multiple",
+      "expanded": false,
+      "fields": [
+        {
+          "dataset_bind": "buyer_seller_country",
+          "uppercase_value": true,
+          "rule": "contains",
+          "rule_type": "prefix",
+          "elastic_rule": ".keyword",
+          "flags": []
+        }
+      ]
+    },
+    {
+      "translation": {
+        "title": {
+          "pt": "País de Procedência",
+          "en": "Acquisition Country",
+          "es": "País de Procedencia"
+        }
+      },
+      "type": "autocomplete-multiple",
+      "expanded": false,
+      "fields": [
+        {
+          "dataset_bind": "origin_destination_country",
+          "uppercase_value": true,
+          "rule": "contains",
+          "rule_type": "prefix",
+          "elastic_rule": ".keyword",
+          "flags": []
+        }
+      ]
+    },
+    {
+      "translation": {
+        "title": {
+          "pt": "Tipo de Container",
+          "en": "Tipo de Contenedor",
+          "es": "Container Type"
+        }
+      },
+      "type": "autocomplete-multiple",
+      "expanded": false,
+      "fields": [
+        {
+          "dataset_bind": "container_type",
+          "uppercase_value": false,
+          "rule": "contains",
+          "rule_type": "prefix",
+          "elastic_rule": ".keyword",
+          "flags": []
         }
       ]
     }

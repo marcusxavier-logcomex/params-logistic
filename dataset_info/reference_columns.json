@@ -1,0 +1,31 @@
+{
+  "count": {
+    "aggregation": "value_count",
+    "translation": {
+      "en": "Shipments",
+      "es": "Embarques",
+      "pt": "Embarques"
+    }
+  },
+  "departure_goods_usd_value": {
+    "translation": {
+      "en": "FOB (USD)",
+      "es": "FOB (USD)",
+      "pt": "FOB (USD)"
+    }
+  },
+  "departure_gross_weight": {
+    "translation": {
+      "en": "Weight (Kg)",
+      "es": "Peso (Kg)",
+      "pt": "Peso (Kg)"
+    }
+  },
+  "teus_qty": {
+    "translation": {
+      "en": "TEUS",
+      "pt": "TEUS",
+      "es": "TEUS"
+    }
+  }
+}
