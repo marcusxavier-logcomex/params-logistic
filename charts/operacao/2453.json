@@ -1,33 +1,30 @@
 {
+  "debug": true,
   "fields": [
-    "origin_destination_country",
     "buyer_seller_country",
+    "origin_destination_country",
     "entry_customs"
   ],
   "group_by": [
     {
       "field": "origin_destination_country.keyword",
-      "group_by": [
-        {
-          "field": "entry_customs.keyword",
-          "aggregation": "terms",
-          "max_results": 1000000
-        }
-      ],
+      "group_by": {
+        "field": "entry_customs.keyword",
+        "aggregation": "terms",
+        "max_results": 1000000
+      },
       "aggregation": "terms",
       "max_results": 1000000
     }
   ],
   "per_page": 100,
-  "formatter": [
-    {
-      "type": "currency",
-      "showCurrencyCode": true,
-      "showCurrencySign": false,
-      "showFractionalDigits": false,
-      "fractionalDigitsLength": 2
-    }
-  ],
+  "formatter": {
+    "type": "currency",
+    "showCurrencyCode": true,
+    "showCurrencySign": false,
+    "showFractionalDigits": false,
+    "fractionalDigitsLength": 2
+  },
   "chart_bind": {
     "column_1": "data/percentage",
     "column_2": "data/buyer_seller_country",
@@ -106,9 +103,9 @@
       "pt": "Posição"
     },
     "subtitle": {
-      "en": "Most used routes per shipments quantity for your search",
-      "es": "Rutas más utilizadas por cantidad de operaciones en el período investigado",
-      "pt": "Rotas mais utilizadas por quantidade de operações no período pesquisado"
+      "en": "Most used routes per operations quantity for your search",
+      "es": "Rutas más utilizadas por cantidad de operaciones para su búsqueda",
+      "pt": "Rotas mais utilizadas por quantidade de operações para sua pesquisa"
     },
     "tooltip_1": {
       "en": "Regarding the applied filter",
@@ -152,8 +149,8 @@
     ],
     "dynamic_field_1": "count",
     "dynamic_groupby_1": [
-      "origin_destination_country",
       "buyer_seller_country",
+      "origin_destination_country",
       "entry_customs"
     ]
   },
