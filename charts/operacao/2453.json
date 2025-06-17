@@ -1,10 +1,11 @@
 {
-  "debug": true,
   "fields": [
     "buyer_seller_country",
     "origin_destination_country",
     "entry_customs",
-    "dispatch_customs"
+    "dispatch_customs",
+    "departure_freight_usd_value",
+    "dispatch_date"
   ],
   "group_by": [
     {
@@ -16,7 +17,17 @@
         "group_by": {
           "field": "dispatch_customs.keyword",
           "aggregation": "terms",
-          "max_results": 1000000
+          "max_results": 1000000,
+          "group_by": [
+            {
+              "field": "dispatch_date",
+              "aggregation": "value_count"
+            },
+            {
+              "field": "departure_freight_usd_value",
+              "aggregation": "avg"
+            }
+          ]
         }
       },
       "aggregation": "terms",
@@ -37,7 +48,8 @@
     "column_3": "data/origin_destination_country",
     "column_4": "data/entry_customs",
     "column_5": "data/dispatch_customs",
-    "column_6": "data/count__sum",
+    "column_6": "data/departure_freight_usd_value",
+    "column_7": "data/count__sum",
     "footer_1": "summary/remaining/count__sum__percentage",
     "footer_2": "translation/otherRoutes",
     "header_1": "translation/header_1",
@@ -108,16 +120,21 @@
       "pt": "Aduana de Entrada"
     },
     "header_5": {
-      "pt": "Aduana de saída",
-      "es": "Aduana de salida",
-      "en": "Exit Customs"
+      "pt": "Aduana de Despacho",
+      "es": "Aduana de Despacho",
+      "en": "Dispatch Customs"
     },
     "header_6": {
+      "en": "Average Freight (USD)",
+      "es": "Frete Medio (USD)",
+      "pt": "Média de Frete (USD)"
+    },
+    "header_7": {
       "en": "Operations",
       "es": "Operaciones",
       "pt": "Operações"
     },
-    "header_7": {
+    "header_8": {
       "en": "Percentage",
       "es": "Porcentaje",
       "pt": "Porcentagem"
@@ -173,12 +190,13 @@
       "sum",
       "count"
     ],
-    "dynamic_field_1": "count",
+    "dynamic_field_1": "dispatch_date",
     "dynamic_groupby_1": [
       "buyer_seller_country",
       "origin_destination_country",
       "entry_customs",
-      "dispatch_customs"
+      "dispatch_customs",
+      "departure_freight_usd_value"
     ]
   },
   "showDynamicField": false,

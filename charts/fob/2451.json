@@ -9,7 +9,7 @@
   ],
   "group_by": [
     {
-      "field": "origin_destination_country.keyword",
+      "field": "buyer_seller_country.keyword",
       "group_by": {
         "field": "entry_customs.keyword",
         "aggregation": "terms",
@@ -44,8 +44,8 @@
   },
   "chart_bind": {
     "column_1": "data/percentage",
-    "column_2": "data/buyer_seller_country",
-    "column_3": "data/origin_destination_country",
+    "column_2": "data/origin_destination_country",
+    "column_3": "data/buyer_seller_country",
     "column_4": "data/entry_customs",
     "column_5": "data/dispatch_customs",
     "column_6": "data/departure_freight_usd_value",
@@ -65,13 +65,17 @@
     "full_list_column_3": "data/buyer_seller_country",
     "full_list_column_4": "data/origin_destination_country",
     "full_list_column_5": "data/entry_customs",
+    "full_list_column_6": "data/dispatch_customs",
+    "full_list_column_7": "data/departure_freight_usd_value",
+    "full_list_column_8": "data/count__sum",
     "full_list_header_1": "translation/position",
     "full_list_header_2": "translation/header_8",
     "full_list_header_3": "translation/header_2",
     "full_list_header_4": "translation/header_3",
     "full_list_header_5": "translation/header_4",
     "full_list_header_6": "translation/header_5",
-    "full_list_header_7": "translation/header_7",
+    "full_list_header_7": "translation/header_6",
+    "full_list_header_8": "translation/header_7",
     "full_list_tooltip_1": "translation/tooltip_1",
     "column_1_tooltipLabel": "translation/embarques",
     "column_1_tooltipValue": "data/count__sum",
@@ -118,14 +122,14 @@
       "pt": "Aduana de Entrada"
     },
     "header_5": {
-      "pt": "Aduana de saída",
-      "es": "Aduana de salida",
-      "en": "Exit Customs"
+      "pt": "Aduana de Despacho",
+      "es": "Aduana de Despacho",
+      "en": "Dispatch Customs"
     },
     "header_6": {
-      "en": "Average Freight",
-      "es": "Frete Medio",
-      "pt": "Média de Frete"
+      "en": "Average Freight (USD)",
+      "es": "Frete Medio (USD)",
+      "pt": "Média de Frete (USD)"
     },
     "header_7": {
       "en": "FOB",
@@ -170,7 +174,7 @@
   },
   "aggregate_by": [
     {
-      "field": "buyer_seller_country.keyword",
+      "field": "origin_destination_country.keyword",
       "aggregation": "terms",
       "max_results": 1000000
     }
@@ -189,8 +193,8 @@
     ],
     "dynamic_field_1": "departure_goods_usd_value",
     "dynamic_groupby_1": [
-      "buyer_seller_country",
       "origin_destination_country",
+      "buyer_seller_country",
       "entry_customs",
       "dispatch_customs",
       "departure_freight_usd_value"
