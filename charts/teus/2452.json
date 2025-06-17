@@ -1,24 +1,22 @@
 {
   "fields": [
+    "buyer_seller_country",
     "teus_qty",
     "origin_destination_country",
-    "buyer_seller_country",
     "entry_customs"
   ],
   "group_by": [
     {
       "field": "origin_destination_country.keyword",
-      "group_by": [
-        {
-          "field": "entry_customs.keyword",
-          "aggregation": "terms",
-          "max_results": 1000000,
-          "group_by": {
-            "field": "teus_qty",
-            "aggregation": "sum"
-          }
-        }
-      ],
+      "group_by": {
+        "field": "entry_customs.keyword",
+        "group_by": {
+          "field": "teus_qty",
+          "aggregation": "sum"
+        },
+        "aggregation": "terms",
+        "max_results": 1000000
+      },
       "aggregation": "terms",
       "max_results": 1000000
     }
@@ -66,14 +64,9 @@
   "max_results": 10000,
   "translation": {
     "title": {
-      "en": "Tradeline",
+      "en": "Trade Lane",
       "es": "Línea comercial",
       "pt": "Linha Comercial"
-    },
-    "embarques": {
-      "en": "FOB (USD): ",
-      "es": "FOB (USD): ",
-      "pt": "FOB (USD): "
     },
     "seeMore": {
       "en": "View more",
@@ -111,9 +104,14 @@
       "pt": "Posição"
     },
     "subtitle": {
-      "en": "Most used routes per shipments quantity for your search",
-      "es": "Rutas más utilizadas por cantidad de operaciones en el período investigado",
-      "pt": "Rotas mais utilizadas por quantidade de operações no período pesquisado"
+      "en": "Most used routes per TEUS quantity for your search",
+      "es": "Rutas más utilizadas por cantidad de TEUS para su búsqueda",
+      "pt": "Rotas mais utilizadas por quantidade de TEUS para sua pesquisa"
+    },
+    "embarques": {
+      "en": "FOB (USD): ",
+      "es": "FOB (USD): ",
+      "pt": "FOB (USD): "
     },
     "tooltip_1": {
       "en": "Regarding the applied filter",
@@ -157,13 +155,13 @@
     ],
     "dynamic_field_1": "teus_qty",
     "dynamic_groupby_1": [
-      "origin_destination_country",
       "buyer_seller_country",
+      "origin_destination_country",
       "entry_customs"
     ]
   },
-  "showDynamicField": false,
   "chart_type_name": "route-chart",
+  "showDynamicField": false,
   "displayedItemsSize": 5,
   "chart_bind_processors": {
     "column_1": "includes/end/%",
