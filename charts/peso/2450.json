@@ -9,7 +9,7 @@
   ],
   "group_by": [
     {
-      "field": "buyer_seller_country.keyword",
+      "field": "origin_destination_country.keyword",
       "group_by": {
         "field": "entry_customs.keyword",
         "aggregation": "terms",
@@ -20,8 +20,8 @@
           "max_results": 1000000,
           "group_by": [
             {
-            "field": "departure_gross_weight",
-            "aggregation": "sum"
+              "field": "departure_gross_weight",
+              "aggregation": "sum"
             },
             {
               "field": "departure_freight_usd_value",
@@ -44,8 +44,8 @@
   },
   "chart_bind": {
     "column_1": "data/percentage",
-    "column_2": "data/origin_destination_country",
-    "column_3": "data/buyer_seller_country",
+    "column_2": "data/buyer_seller_country",
+    "column_3": "data/origin_destination_country",
     "column_4": "data/entry_customs",
     "column_5": "data/dispatch_customs",
     "column_6": "data/departure_freight_usd_value",
@@ -174,7 +174,7 @@
   },
   "aggregate_by": [
     {
-      "field": "origin_destination_country.keyword",
+      "field": "buyer_seller_country.keyword",
       "aggregation": "terms",
       "max_results": 1000000
     }
@@ -193,8 +193,8 @@
     ],
     "dynamic_field_1": "departure_gross_weight",
     "dynamic_groupby_1": [
-      "origin_destination_country",
       "buyer_seller_country",
+      "origin_destination_country",
       "entry_customs",
       "dispatch_customs",
       "departure_freight_usd_value"

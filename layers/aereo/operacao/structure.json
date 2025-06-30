@@ -1,22 +1,40 @@
 [
   [
-    [
-      {
-        "type": "chart",
-        "value": 2441
-      },
-      {
-        "type": "chart",
-        "value": 2445
-      },
-      {
-        "type": "chart",
-        "value": 2449
-      },
-      {
-        "type": "chart",
-        "value": 2440
-      }
-    ]
+    {
+      "type": "chart",
+      "value": 2441
+    },
+    {
+      "type": "chart",
+      "value": 2445
+    },
+    {
+      "type": "chart",
+      "value": 2449
+    },
+    {
+      "type": "chart",
+      "value": 2440
+    },
+    {
+      "type": "chart",
+      "value": 2680
+    },
+    {
+      "type": "chart",
+      "value": 2679
+    },
+    {
+      "type": "chart",
+      "value": 2681
+    },
+    {
+      "type": "chart",
+      "value": 2683
+    },
+    {
+      "type": "chart",
+      "value": 2453
+    }
   ]
 ]

@@ -3,23 +3,7 @@
     [
       {
         "type": "chart",
-        "value": 2441
-      },
-      {
-        "type": "chart",
-        "value": 2445
-      },
-      {
-        "type": "chart",
-        "value": 2449
-      },
-      {
-        "type": "chart",
-        "value": 2440
-      },
-      {
-        "type": "chart",
-        "value": 2683
+        "value": 2703
       },
       {
         "type": "chart",
@@ -27,7 +11,55 @@
       },
       {
         "type": "chart",
+        "value": 2705
+      },
+      {
+        "type": "chart",
+        "value": 2704
+      },
+      {
+        "type": "chart",
         "value": 2453
+      },
+      {
+        "type": "chart",
+        "value": 2697
+      },
+      {
+        "type": "chart",
+        "value": 2698
+      },
+      {
+        "type": "chart",
+        "value": 2694
+      },
+      {
+        "type": "chart",
+        "value": 2696
+      },
+      {
+        "type": "chart",
+        "value": 2691
+      },
+      {
+        "type": "chart",
+        "value": 2693
+      },
+      {
+        "type": "chart",
+        "value": 2695
+      },
+      {
+        "type": "chart",
+        "value": 2700
+      },
+      {
+        "type": "chart",
+        "value": 2701
+      },
+      {
+        "type": "chart",
+        "value": 2702
       }
     ]
   ]

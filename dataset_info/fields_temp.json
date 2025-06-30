@@ -1240,40 +1240,5 @@
     "type": "number",
     "show": "true",
     "workspace": true
-  },
-  {
-    "name": "departure_insurance_usd_value",
-    "label": {
-      "pt": "Valor de Seguro USD",
-      "en": "USD Value of Goods Insurance",
-      "es": "Valor de Seguro USD"
-    },
-    "description": "Valor de Seguro USD",
-    "used_on_side_filter": [],
-    "used_on_details": true,
-    "used_on_excel": true,
-    "used_on_charts": true,
-    "elastic_rule": "",
-    "type": "number",
-    "show": "true",
-    "workspace": true
-  },
-  {
-    "name": "departure_freight_usd_value",
-    "label": {
-      "pt": "Valor de Frete USD",
-      "en": "USD Value of Goods Freight",
-      "es": "Valor de Frete USD"
-    },
-    "description": "Valor de Frete USD",
-    "used_on_side_filter": [],
-    "used_on_details": true,
-    "used_on_excel": true,
-    "used_on_charts": true,
-    "elastic_rule": "",
-    "type": "number",
-    "show": "true",
-    "workspace": true
   }
-
 ]

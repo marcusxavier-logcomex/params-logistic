@@ -1,0 +1,87 @@
+{
+  "colors": [
+    "#1FAD67",
+    "#7CE2E8",
+    "#440C8C",
+    "#893AEE"
+  ],
+  "fields": [
+    "dispatch_date",
+    "supplier_name"
+  ],
+  "group_by": [
+    {
+      "field": "dispatch_date",
+      "aggregation": "terms",
+      "max_results": 100000
+    }
+  ],
+  "per_page": 100,
+  "formatter": [
+    {
+      "type": "quantity",
+      "showFractionalDigits": false,
+      "fractionalDigitsLength": 2
+    }
+  ],
+  "chart_bind": {
+    "legend": "data/supplier_name",
+    "y_title": "translation/yTitle",
+    "x_position": "data/dispatch_date",
+    "y_position": "data/supplier_name__count__raw"
+  },
+  "pre_search": {
+    "group_by": [],
+    "shard_size": 10,
+    "max_results": 10,
+    "aggregate_by": [
+      {
+        "field": "supplier_name.keyword",
+        "order_by": {
+          "usd_value": "desc"
+        },
+        "aggregation": "terms"
+      }
+    ]
+  },
+  "shard_size": 10,
+  "max_results": 5,
+  "translation": {
+    "title": {
+      "en": "Top Exporters over time",
+      "es": "Mayores Exportadores en el tiempo",
+      "pt": "Maiores Exportadores no tempo"
+    },
+    "yTitle": {
+      "en": "",
+      "es": "",
+      "pt": ""
+    },
+    "subtitle": {
+      "en": "Comparison of operations for the researched period",
+      "es": "Comparativo de operaciones para el período de búsqueda",
+      "pt": "Comparativo de operações para o período pesquisado"
+    }
+  },
+  "aggregate_by": [
+    {
+      "field": "supplier_name.keyword",
+      "aggregation": "terms"
+    }
+  ],
+  "torettoFields": {
+    "dynamic_calc_1": "sum",
+    "dynamic_calc_2": "sum",
+    "dynamic_field_1": "count",
+    "dynamic_field_2": "count",
+    "dynamic_groupby_1": [
+      "dispatch_date",
+      "supplier_name"
+    ],
+    "dynamic_groupby_2": "supplier_name"
+  },
+  "displayedItemsSize": 4,
+  "supressedValues": [
+    "RAZÓN SOCIAL NO INFORMADA"
+  ]
+}

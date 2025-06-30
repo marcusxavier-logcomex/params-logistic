@@ -42,6 +42,27 @@
     {
       "translation": {
         "title": {
+          "pt": "Período",
+          "en": "Period",
+          "es": "Período"
+        }
+      },
+      "type": "datepicker",
+      "expanded": true,
+      "fields": [
+        {
+          "limitOnPresetDates": true,
+          "dataset_bind": "dispatch_date",
+          "rule": "date_range",
+          "rule_type": "prefix",
+          "elastic_rule": ".keyword",
+          "flags": []
+        }
+      ]
+    },
+    {
+      "translation": {
+        "title": {
           "pt": "Modal",
           "en": "Transport Mode",
           "es": "Medio de Transporte"
@@ -94,11 +115,11 @@
           "es": "Fracción Arrancelaria | HS Code"
         }
       },
-      "type": "multiple-text-filter",
+      "type": "autocomplete-multiple",
       "expanded": false,
       "fields": [
         {
-          "dataset_bind": "departure_hscodes",
+          "dataset_bind": "departure_hscodes_array",
           "uppercase_value": false,
           "rule": "contains",
           "rule_type": "prefix",
@@ -111,21 +132,22 @@
     {
       "translation": {
         "title": {
-          "pt": "Período",
-          "en": "Period",
-          "es": "Período"
+          "pt": "Tipo de Declaração",
+          "en": "Declaration Type",
+          "es": "Clave de Pedimento"
         }
       },
-      "type": "datepicker",
-      "expanded": true,
+      "type": "autocomplete-multiple",
+      "expanded": false,
       "fields": [
         {
-          "limitOnPresetDates": true,
-          "dataset_bind": "dispatch_date",
-          "rule": "date_range",
+          "dataset_bind": "customs_regime_classification",
+          "uppercase_value": false,
+          "rule": "contains",
           "rule_type": "prefix",
           "elastic_rule": ".keyword",
-          "flags": []
+          "flags": [],
+          "keysBeforeSearch": 2
         }
       ]
     },
@@ -240,32 +262,11 @@
           "es": "Transportista"
         }
       },
-      "type": "multiple-text-filter",
+      "type": "autocomplete-multiple",
       "expanded": false,
       "fields": [
         {
           "dataset_bind": "transport_company_name",
-          "uppercase_value": false,
-          "rule": "contains",
-          "rule_type": "prefix",
-          "elastic_rule": ".keyword",
-          "flags": []
-        }
-      ]
-    },
-    {
-      "translation": {
-        "title": {
-          "pt": "Tipo de Embarque",
-          "en": "Tipo de Embarque",
-          "es": "Shipment Type"
-        }
-      },
-      "type": "multiple-text-filter",
-      "expanded": false,
-      "fields": [
-        {
-          "dataset_bind": "shipment_type",
           "uppercase_value": false,
           "rule": "contains",
           "rule_type": "prefix",
@@ -308,7 +309,7 @@
       "fields": [
         {
           "dataset_bind": "supplier_name",
-          "uppercase_value": true,
+          "uppercase_value": false,
           "rule": "contains",
           "rule_type": "prefix",
           "elastic_rule": ".keyword",
@@ -393,27 +394,6 @@
         {
           "dataset_bind": "origin_destination_country",
           "uppercase_value": true,
-          "rule": "contains",
-          "rule_type": "prefix",
-          "elastic_rule": ".keyword",
-          "flags": []
-        }
-      ]
-    },
-    {
-      "translation": {
-        "title": {
-          "pt": "Tipo de Container",
-          "en": "Tipo de Contenedor",
-          "es": "Container Type"
-        }
-      },
-      "type": "autocomplete-multiple",
-      "expanded": false,
-      "fields": [
-        {
-          "dataset_bind": "container_type",
-          "uppercase_value": false,
           "rule": "contains",
           "rule_type": "prefix",
           "elastic_rule": ".keyword",

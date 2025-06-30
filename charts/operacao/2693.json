@@ -1,0 +1,85 @@
+{
+  "colors": [
+    "#728EF3",
+    "#FF8100",
+    "#F33EE1",
+    "#893AEE"
+  ],
+  "fields": [
+    "dispatch_date",
+    "custom_broker_id"
+  ],
+  "group_by": [
+    {
+      "field": "dispatch_date",
+      "aggregation": "terms",
+      "max_results": 100000
+    }
+  ],
+  "per_page": 100,
+  "formatter": [
+    {
+      "type": "quantity",
+      "showFractionalDigits": false,
+      "fractionalDigitsLength": 2,
+      "preserveKeys": true
+    }
+  ],
+  "chart_bind": {
+    "legend": "data/custom_broker_id",
+    "y_title": "translation/yTitle",
+    "x_position": "data/dispatch_date",
+    "y_position": "data/custom_broker_id__count__raw"
+  },
+  "pre_search": {
+    "group_by": [],
+    "shard_size": 10,
+    "max_results": 10,
+    "aggregate_by": [
+      {
+        "field": "custom_broker_id.keyword",
+        "order_by": {
+          "usd_value": "desc"
+        },
+        "aggregation": "terms"
+      }
+    ]
+  },
+  "shard_size": 10,
+  "max_results": 4,
+  "translation": {
+    "title": {
+      "en": "Top Custom brokers over time",
+      "es": "Mayores Patentes Aduanais en el tiempo",
+      "pt": "Maiores Patentes Aduanais no tempo"
+    },
+    "yTitle": {
+      "en": "",
+      "es": "",
+      "pt": ""
+    },
+    "subtitle": {
+      "en": "Comparison of operational values for the researched period",
+      "es": "Comparativo de valores operacionales para el período de búsqueda",
+      "pt": "Comparativo de valores operacionais para o período pesquisado"
+    }
+  },
+  "aggregate_by": [
+    {
+      "field": "custom_broker_id.keyword",
+      "aggregation": "terms"
+    }
+  ],
+  "torettoFields": {
+    "dynamic_calc_1": "sum",
+    "dynamic_calc_2": "sum",
+    "dynamic_field_1": "count",
+    "dynamic_field_2": "count",
+    "dynamic_groupby_1": [
+      "dispatch_date",
+      "custom_broker_id"
+    ],
+    "dynamic_groupby_2": "custom_broker_id"
+  },
+  "displayedItemsSize": 4
+}

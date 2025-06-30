@@ -1,0 +1,70 @@
+{
+  "colors": [
+    "#1FAD67",
+    "#7CE2E8",
+    "#440C8C",
+    "#893AEE"
+  ],
+  "fields": [
+    "dispatch_date",
+    "importer_name"
+  ],
+  "group_by": [
+    {
+      "field": "dispatch_date",
+      "aggregation": "terms",
+      "max_results": 100000
+    }
+  ],
+  "per_page": 100,
+  "formatter": [
+    {
+      "type": "quantity",
+      "showFractionalDigits": false,
+      "fractionalDigitsLength": 2
+    }
+  ],
+  "chart_bind": {
+    "legend": "data/importer_name",
+    "y_title": "translation/yTitle",
+    "x_position": "data/dispatch_date",
+    "y_position": "data/importer_name__count__raw"
+  },
+  "shard_size": 10,
+  "max_results": 4,
+  "translation": {
+    "title": {
+      "en": "Top Importers over time",
+      "es": "Mayores importadores en el tiempo",
+      "pt": "Maiores Importadores no tempo"
+    },
+    "yTitle": {
+      "en": "FOB (USD)",
+      "es": "FOB (USD)",
+      "pt": "FOB (USD)"
+    },
+    "subtitle": {
+      "en": "FOB (USD) value comparison for your research",
+      "es": "Comparativo de valor FOB (USD) para el período de búsqueda",
+      "pt": "Comparativo de FOB (USD) para sua pesquisa"
+    }
+  },
+  "aggregate_by": [
+    {
+      "field": "importer_name.keyword",
+      "aggregation": "terms"
+    }
+  ],
+  "torettoFields": {
+    "dynamic_calc_1": "sum",
+    "dynamic_calc_2": "sum",
+    "dynamic_field_1": "count",
+    "dynamic_field_2": "count",
+    "dynamic_groupby_1": [
+      "dispatch_date",
+      "importer_name"
+    ],
+    "dynamic_groupby_2": "importer_name"
+  },
+  "displayedItemsSize": 4
+}

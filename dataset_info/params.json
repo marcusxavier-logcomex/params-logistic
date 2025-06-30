@@ -1,0 +1,177 @@
+{
+  "enableLia": true,
+  "identificationTag": {
+    "filled": false,
+    "icon": "south_west",
+    "name": {
+      "es": "Logistic Mexico Import",
+      "en": "Logistic Mexico Import",
+      "pt": "Logistic Mexico Import"
+    }
+  },
+  "initialSearchPage": {
+    "textStrong1": {
+      "pt": "Faça uma pesquisa e ",
+      "en": "Make a search and ",
+      "es": "Realiza una búsqueda y "
+    },
+    "textStrong2": {
+      "pt": "o mercado de  ",
+      "en": "the market of ",
+      "es": "el mercado de "
+    },
+    "textStrongest1": {
+      "pt": "comece a explorar",
+      "en": "start exploring",
+      "es": "comienza a explorar"
+    },
+    "textStrongest2": {
+      "pt": "operações de importação no México",
+      "en": "import operations at Mexico",
+      "es": "operaciones de importación en México"
+    },
+    "mandatoryFilters": [
+      "goods_description",
+      "hscode"
+    ],
+    "filterOptions": [
+      {
+        "component": "SelectFilter",
+        "id": "entryExitTransportFilter",
+        "maxWidth": "10%",
+        "optionsTitle": {
+          "pt": "ESCOLHA O MODAL",
+          "es": "ELIGE EL MODO",
+          "en": "CHOSE THE MODAL"
+        },
+        "options": [
+          {
+            "label": {
+              "es": "Carretero",
+              "pt": "Rodoviário",
+              "en": "Road"
+            },
+            "value": "carretero",
+            "default": true,
+            "icon": "local_shipping"
+          },
+          {
+            "label": {
+              "es": "Maritimo",
+              "pt": "Marítimo",
+              "en": "Marítime"
+            },
+            "value": "maritimo",
+            "icon": "directions_boat"
+          },
+          {
+            "label": {
+              "es": "Aereo",
+              "pt": "Aéreo",
+              "en": "Marítime"
+            },
+            "value": "aereo",
+            "icon": "flight"
+          }
+        ],
+        "sideFilterTarget": "entryExitTransportFilter"
+      },
+      {
+        "component": "AutocompleteMultiple",
+        "id": "originDestinationCountryFilter",
+        "chipQuantityLimit": 2,
+        "options": {
+          "maxWidth": "20%",
+          "fields": [
+            {
+              "dataset_bind": "origin_destination_country"
+            }
+          ],
+          "prependIcon": "public",
+          "label": {
+            "pt": "PAÍS DE PROCEDÊNCIA",
+            "es": "PAIS DE PROCEDENCIA",
+            "en": "COUNTRY OF ORIGIN"
+          }
+        }
+      },
+      {
+        "component": "AutocompleteMultiple",
+        "id": "entryCustomsFilter",
+        "chipQuantityLimit": 1,
+        "options": {
+          "maxWidth": "20%",
+          "fields": [
+            {
+              "dataset_bind": "entry_customs"
+            }
+          ],
+          "prependInternalImage": "frame_mexico.svg",
+          "label": {
+            "pt": "ADUANA DE ENTRADA",
+            "es": "ADUANA DE ENTRADA",
+            "en": "ENTRY CUSTOM"
+          }
+        }
+      },
+      {
+        "component": "AutocompleteMultiple",
+        "id": "dispatchCustomsFilter",
+        "chipQuantityLimit": 1,
+        "options": {
+          "maxWidth": "20%",
+          "fields": [
+            {
+              "dataset_bind": "dispatch_customs"
+            }
+          ],
+          "prependInternalImage": "frame_mexico.svg",
+          "label": {
+            "pt": "ADUANA DE DESPACHO",
+            "es": "ADUANA DE DESPACHO",
+            "en": "DISPATCH CUSTOM"
+          }
+        }
+      },
+      {
+        "component": "AutocompleteMultiple",
+        "id": "departureHsCodes",
+        "chipQuantityLimit": 2,
+        "options": {
+          "maxWidth": "20%",
+          "fields": [
+            {
+              "dataset_bind": "departure_hscodes"
+            }
+          ],
+          "prependIcon": "shopping_bag",
+          "label": {
+            "pt": "HSCODE",
+            "es": "HSCODE",
+            "en": "HSCODE"
+          }
+        }
+      },
+      {
+        "component": "Datepicker",
+        "isPeriod": true,
+        "id": "periodFilter",
+        "options": {
+          "ignoreFlexGrow": true,
+          "maxWidth": "10%",
+          "fields": [
+            {
+              "dataset_bind": "dispatch_date"
+            }
+          ],
+          "prependIcon": "calendar",
+          "placeholder": {
+            "pt": "PERÍODO",
+            "es": "PERIODO",
+            "en": "PERIOD"
+          }
+        }
+      }
+    ]
+  }
+}

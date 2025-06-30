@@ -11,6 +11,50 @@
   },
   {
     "grid": {
+      "h": 1,
+      "w": 3,
+      "x": 3,
+      "y": 2
+    },
+    "chart_id": "2679",
+    "cellHeight": "50px",
+    "chart_type_name": "GeneralChartCentralizedValue"
+  },
+  {
+    "grid": {
+      "h": 1,
+      "w": 3,
+      "x": 0,
+      "y": 2
+    },
+    "chart_id": "2680",
+    "cellHeight": "50px",
+    "chart_type_name": "GeneralChartCentralizedValue"
+  },
+  {
+    "grid": {
+      "h": 1,
+      "w": 6,
+      "x": 0,
+      "y": 1
+    },
+    "chart_id": "2684",
+    "cellHeight": "150px",
+    "chart_type_name": "BoardChartPercentage"
+  },
+  {
+    "grid": {
+      "h": 3,
+      "w": 12,
+      "x": 0,
+      "y": 3
+    },
+    "chart_id": "2685",
+    "cellHeight": "600px",
+    "chart_type_name": "HeatMap"
+  },
+  {
+    "grid": {
       "h": 3,
       "w": 6,
       "x": 0,
@@ -41,5 +85,16 @@
     "chart_id": "2443",
     "cellHeight": "600px",
     "chart_type_name": "DateLineChart"
+  },
+  {
+    "grid": {
+      "h": 1,
+      "w": 12,
+      "x": 0,
+      "y": 7
+    },
+    "chart_id": "2451",
+    "cellHeight": "420px",
+    "chart_type_name": "RouteChart"
   }
 ]
