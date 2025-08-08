@@ -1,0 +1,199 @@
+{
+  "fields": [
+    "supplier_name",
+    "departure_goods_usd_value",
+    "buyer_seller_country",
+    "importer_name"
+  ],
+  "group_by": [
+    {
+      "field": "importer_name.keyword",
+      "aggregation": "terms",
+      "max_results": 5,
+      "group_by": {
+        "field": "departure_goods_usd_value",
+        "aggregation": "sum"
+      }
+    },
+    {
+        "field": "buyer_seller_country.keyword",
+        "aggregation": "terms",
+        "max_results": 1
+    }
+  ],
+  "per_page": 100,
+  "formatter": {
+    "type": "currency",
+    "showFractionalDigits": false,
+    "fractionalDigitsLength": 2
+  },
+  "chart_bind": {
+    "column_1": "data/position",
+    "column_2": "data/supplier_name",
+    "column_3": "data/count__sum",
+    "column_4": "data/buyer_seller_country",
+    "footer_1": "summary/remaining/count__sum__percentage",
+    "footer_2": "translation/otherRoutes",
+    "header_1": "translation/header1",
+    "header_2": "translation/header2",
+    "header_3": "translation/header3",
+    "header_4": "translation/header4",
+    "others_action": "translation/seeMore",
+    "full_list_column_1": "data/position",
+    "full_list_column_2": "data/supplier_name",
+    "full_list_column_3": "data/count__sum",
+    "full_list_column_4": "data/buyer_seller_country",
+    "full_list_header_1": "translation/header1",
+    "full_list_header_2": "translation/header2",
+    "full_list_header_3": "translation/header3",
+    "full_list_header_4": "translation/header4",
+    "full_list_tooltip_1": "translation/tooltip_1",
+    "column_1_tooltipLabel": "translation/embarques",
+    "column_1_tooltipValue": "data/count__sum",
+    "footer_1_tooltipLabel": "translation/footerLabel",
+    "footer_1_tooltipValue": "summary/remaining/count__sum",
+    "full_list_1_tooltipLabel": "translation/footerLabel",
+    "full_list_1_tooltipValue": "summary/remaining/count__sum"
+  },
+  "shard_size": 100,
+  "treatItems": {
+    "hideShare": [
+      "NO INFORMADO"
+    ],
+    "moveToEnd": [
+      "NO INFORMADO"
+    ],
+    "hideProgressLine": [
+      "NO INFORMADO"
+    ]
+  },
+  "max_results": 10000,
+  "quickFilter": {
+    "supplier_name": {
+      "enabled": "true",
+      "bindFilter": {
+        "en": "supplier_name",
+        "es": "supplier_name",
+        "pt": "supplier_name"
+      },
+      "translation": {
+        "question_add": {
+          "en": "Would you like to filter by possible importer [BIND_FIELD_VALUE]?",
+          "es": "¿Le gustaría filtrar por el posible supplier_name [BIND_FIELD_VALUE]?",
+          "pt": "Você gostaria de filtrar pelo provável supplier_name [BIND_FIELD_VALUE]?"
+        },
+        "observation_add": {
+          "en": "A new query will be applied",
+          "es": "Se aplicará una nueva consulta",
+          "pt": "Uma nova consulta será aplicada"
+        },
+        "question_remove": {
+          "en": "Would you like to remove the filter by possible importer [BIND_FIELD_VALUE]?",
+          "es": "¿Le gustaría eliminar el filtro por el posible supplier_name [BIND_FIELD_VALUE]?",
+          "pt": "Você gostaria de remover o filtro pelo provável supplier_name [BIND_FIELD_VALUE]?"
+        },
+        "observation_remove": {
+          "en": "A new query will be applied",
+          "es": "Se aplicará una nueva consulta",
+          "pt": "Uma nova consulta será aplicada"
+        }
+      },
+      "dynamicTarget": "full_list_column_2"
+    }
+  },
+  "translation": {
+    "title": {
+      "en": "Top Importers",
+      "es": "Clasificación de Importadores",
+      "pt": "Ranking dos Importadores"
+    },
+    "value": {
+      "en": "FOB (USD)",
+      "es": "FOB (USD)",
+      "pt": "FOB (USD)"
+    },
+    "others": {
+      "en": "OTHERS",
+      "es": "OTROS",
+      "pt": "OUTROS"
+    },
+    "header1": {
+      "en": "Position",
+      "es": "Posición",
+      "pt": "Posição"
+    },
+    "header2": {
+      "en": "Exporter Name",
+      "es": "Nombre Exportador",
+      "pt": "Nome Exportador"
+    },
+    "header3": {
+      "en": "FOB (USD)",
+      "es": "FOB (USD)",
+      "pt": "FOB (USD)"
+    },
+    "header4": {
+      "en": "",
+      "es": "",
+      "pt": ""
+    },
+    "seeMore": {
+      "en": "View more",
+      "es": "Ver más",
+      "pt": "Ver mais"
+    },
+    "subtitle": {
+      "en": "Exporters with the highest FOB (USD) value for your search",
+      "es": "Exportadores con mayor valor FOB (USD) para su búsqueda",
+      "pt": "Exportadores com maior valor FOB (USD) para sua pesquisa"
+    },
+    "tooltip_1": {
+      "en": "Regarding the applied filter",
+      "es": "Respecto al filtro aplicado",
+      "pt": "Em relação ao filtro aplicado"
+    },
+    "tooltip_4": {
+      "en": "Regarding the applied filter",
+      "es": "Respecto al filtro aplicado",
+      "pt": "Em relação ao filtro aplicado"
+    },
+    "othersAction": {
+      "en": "Hide",
+      "es": "Ocultar",
+      "pt": "Recolher"
+    }
+  },
+  "aggregate_by": [
+    {
+      "field": "supplier_name.keyword",
+      "order_by": {
+        "departure_goods_usd_value": "desc"
+      },
+      "aggregation": "terms"
+    }
+  ],
+  "columnsWidth": [
+    15,
+    45,
+    20,
+    20
+  ],
+  "reorderFields": {
+    "field": "fieldName",
+    "aggregation": "__sort"
+  },
+  "torettoFields": {
+    "dynamic_calc_1": [
+      "sum",
+      "count"
+    ],
+    "dynamic_field_1": "departure_goods_usd_value",
+    "dynamic_groupby_1": [
+      "supplier_name",
+      "importer_name",
+      "buyer_seller_country"
+    ]
+  },
+  "displayedItemsSize": 100,
+  "hasPosition": true
+}
