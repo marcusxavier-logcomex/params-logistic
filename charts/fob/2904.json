@@ -10,15 +10,17 @@
       "field": "importer_name.keyword",
       "aggregation": "terms",
       "max_results": 5,
-      "group_by": {
-        "field": "departure_goods_usd_value",
-        "aggregation": "sum"
-      }
-    },
-    {
-        "field": "buyer_seller_country.keyword",
-        "aggregation": "terms",
-        "max_results": 1
+      "group_by": [
+        {
+          "field": "departure_goods_usd_value",
+          "aggregation": "sum"
+        },
+        {
+            "field": "buyer_seller_country.keyword",
+            "aggregation": "terms",
+            "max_results": 1
+        }
+      ]
     }
   ],
   "per_page": 100,
@@ -67,7 +69,7 @@
       "NO INFORMADO"
     ]
   },
-  "max_results": 10000,
+  "max_results": 5,
   "quickFilter": {
     "supplier_name": {
       "enabled": "true",
@@ -194,6 +196,6 @@
       "buyer_seller_country"
     ]
   },
-  "displayedItemsSize": 100,
+  "displayedItemsSize": 5,
   "hasPosition": true
 }
