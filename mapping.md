@@ -12,6 +12,7 @@ Layers FOB:
 2443 -> ranking de transportista no tempo
 2447 -> ranking de importador
 2451 -> Linea comercial
+2904 -> grafico sankey
 
 Layers TEUS:
 2439 -> ranking de transportista

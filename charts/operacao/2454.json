@@ -1,0 +1,138 @@
+{
+  "icon": {
+    "row_1_icon": {
+      "icon": "Balance",
+      "color": "#9F6CBB"
+    },
+    "row_2_icon": {
+      "icon": "Quantity",
+      "color": "#9F6CBB"
+    },
+    "row_3_icon": {
+      "icon": "Freight",
+      "color": "#9F6CBB"
+    },
+    "row_4_icon": {
+      "icon": "CoinShield",
+      "color": "#9F6CBB"
+    }
+  },
+  "fields": [
+    "departure_gross_weight",
+    "dispatch_date",
+    "departure_freight_usd_value",
+    "departure_insurance_usd_value"
+  ],
+  "group_by": [],
+  "per_page": 100,
+  "formatter": [
+    {
+      "type": "weight",
+      "column": "departure_gross_weight",
+      "showCurrencyCode": false,
+      "showCurrencySign": false,
+      "showFractionalDigits": false,
+      "fractionalDigitsLength": 2
+    },
+    {
+      "type": "weight",
+      "column": "departure_freight_usd_value",
+      "showCurrencyCode": false,
+      "showCurrencySign": false,
+      "showFractionalDigits": false,
+      "fractionalDigitsLength": 2
+    },
+    {
+      "type": "weight",
+      "column": "departure_insurance_usd_value",
+      "showCurrencyCode": false,
+      "showCurrencySign": false,
+      "showFractionalDigits": false,
+      "fractionalDigitsLength": 2
+    }
+  ],
+  "chart_bind": {
+    "first_column_row_1": "icon/row_1_icon",
+    "first_column_row_2": "icon/row_2_icon",
+    "first_column_row_3": "icon/row_3_icon",
+    "first_column_row_4": "icon/row_4_icon",
+    "third_column_row_1": "data/departure_gross_weight__sum",
+    "third_column_row_2": "data/count__sum",
+    "third_column_row_3": "data/departure_freight_usd_value__sum",
+    "third_column_row_4": "data/departure_insurance_usd_value__sum",
+    "second_column_row_1": "translation/row_1_translate",
+    "second_column_row_2": "translation/row_2_translate",
+    "second_column_row_3": "translation/row_3_translate",
+    "second_column_row_4": "translation/row_4_translate"
+  },
+  "max_results": 0,
+  "translation": {
+    "title": {
+      "en": "Summary",
+      "es": "Resumen",
+      "pt": "Resumo"
+    },
+    "subtitle": {
+      "en": "",
+      "es": "",
+      "pt": ""
+    },
+    "row_1_translate": {
+      "en": "Weight (Kg)",
+      "es": "Peso (Kg)",
+      "pt": "Peso (Kg)"
+    },
+    "row_2_translate": {
+      "en": "Operations",
+      "es": "Operaciones",
+      "pt": "Operações"
+    },
+    "row_3_translate": {
+      "en": "Freight total value",
+      "es": "Valor total del frete",
+      "pt": "Valor total de frete"
+    },
+    "row_4_translate": {
+      "en": "Ensurance total value",
+      "es": "Valor total del seguro",
+      "pt": "Valor total de seguro"
+    }
+  },
+  "aggregate_by": [
+    {
+      "field": "departure_gross_weight",
+      "use_alias": true,
+      "show_field": false,
+      "aggregation": "sum"
+    },
+    {
+      "field": "dispatch_date",
+      "use_alias": true,
+      "show_field": false,
+      "aggregation": "value_count"
+    },
+    {
+      "field": "departure_freight_usd_value",
+      "use_alias": true,
+      "show_field": false,
+      "aggregation": "sum"
+    },
+    {
+      "field": "departure_insurance_usd_value",
+      "use_alias": true,
+      "show_field": false,
+      "aggregation": "sum"
+    }
+  ],
+  "torettoFields": {
+    "dynamic_calc_1": "sum",
+    "dynamic_calc_2": "sum",
+    "dynamic_calc_3": "sum",
+    "dynamic_calc_4": "sum",
+    "dynamic_calc_5": "sum",
+    "dynamic_field_1": "departure_gross_weight",
+    "dynamic_field_2": "count",
+    "dynamic_field_3": "departure_freight_usd_value",
+    "dynamic_field_4": "departure_insurance_usd_value"
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "colors": [
+    "#1FAD67",
+    "#7CE2E8",
+    "#440C8C",
+    "#893AEE",
+    "#C6A1F6",
+    "#C00BAE",
+    "#F00ED9",
+    "#F99EF0",
+    "#E57400",
+    "#FFA74C"
+  ],
+  "fields": [
+    "permit_aggregated.clave",
+    "permit_aggregated.value"
+  ],
+  "group_by": [
+    {
+      "field": "permit_aggregated.value",
+      "aggregation": "sum"
+    }
+  ],
+  "per_page": 100,
+  "formatter": {
+    "type": "currency",
+    "showFractionalDigits": false,
+    "fractionalDigitsLength": 2
+  },
+  "chart_bind": {
+    "main_label": "data/permit_aggregated.clave",
+    "progress_bar": "data/permit_aggregated.clave__permit_aggregated.value__percentage",
+    "quick_filter": "paramsdata/quickFilter/permit_aggregated.clave",
+    "others_action": "translation/seeMore",
+    "column_ranking": "data/permit_aggregated.clave__ranking",
+    "others_main_label": "translation/othersMainLabel",
+    "others_main_value": "summary/remaining/count",
+    "full_list_column_1": "data/index",
+    "full_list_column_2": "data/permit_aggregated.clave",
+    "full_list_column_3": "data/permit_aggregated.clave__permit_aggregated.value",
+    "full_list_column_4": "data/permit_aggregated.clave__permit_aggregated.value__percentage",
+    "full_list_header_1": "translation/header1",
+    "full_list_header_2": "translation/header2",
+    "full_list_header_3": "translation/header3",
+    "full_list_header_4": "translation/header4",
+    "full_list_reorder_2": "reorderFields/field",
+    "full_list_reorder_3": "reorderFields/aggregation",
+    "full_list_tooltip_1": "translation/tooltip_1",
+    "full_list_tooltip_4": "translation/tooltip_4",
+    "others_progress_bar": "summary/remaining/permit_aggregated.clave__permit_aggregated.value__percentage",
+    "additional_info_label_1": "translation/firstColumn",
+    "additional_info_label_2": "translation/secondColumn",
+    "additional_info_value_1": "data/permit_aggregated.clave__permit_aggregated.value",
+    "additional_info_value_2": "data/permit_aggregated.clave__permit_aggregated.value__percentage",
+    "others_additional_info_label_1": "translation/firstColumn",
+    "others_additional_info_label_2": "translation/secondColumn",
+    "others_additional_info_value_1": "summary/remaining/permit_aggregated.clave__count",
+    "others_additional_info_value_2": "summary/remaining/permit_aggregated.clave__permit_aggregated.value__percentage"
+  },
+  "shard_size": 10,
+  "treatItems": {
+    "hideShare": [
+      "NO INFORMADO",
+      "RAZÓN SOCIAL NO INFORMADA"
+    ],
+    "moveToEnd": [
+      "NO INFORMADO",
+      "RAZÓN SOCIAL NO INFORMADA"
+    ],
+    "hideProgressLine": [
+      "NO INFORMADO",
+      "RAZÓN SOCIAL NO INFORMADA"
+    ]
+  },
+  "max_results": 10000,
+  "quickFilter": {
+    "permit_aggregated.clave": {
+      "enabled": "true",
+      "bindFilter": {
+        "en": "permit_aggregated.clave",
+        "es": "permit_aggregated.clave",
+        "pt": "permit_aggregated.clave"
+      },
+      "translation": {
+        "question_add": {
+          "en": "Would you like to filter by possible importer [BIND_FIELD_VALUE]?",
+          "es": "¿Le gustaría filtrar por el posible permit_aggregated.clave [BIND_FIELD_VALUE]?",
+          "pt": "Você gostaria de filtrar pelo provável permit_aggregated.clave [BIND_FIELD_VALUE]?"
+        },
+        "observation_add": {
+          "en": "A new query will be applied",
+          "es": "Se aplicará una nueva consulta",
+          "pt": "Uma nova consulta será aplicada"
+        },
+        "question_remove": {
+          "en": "Would you like to remove the filter by possible importer [BIND_FIELD_VALUE]?",
+          "es": "¿Le gustaría eliminar el filtro por el posible permit_aggregated.clave [BIND_FIELD_VALUE]?",
+          "pt": "Você gostaria de remover o filtro pelo provável permit_aggregated.clave [BIND_FIELD_VALUE]?"
+        },
+        "observation_remove": {
+          "en": "A new query will be applied",
+          "es": "Se aplicará una nueva consulta",
+          "pt": "Uma nova consulta será aplicada"
+        }
+      },
+      "dynamicTarget": "full_list_column_2"
+    }
+  },
+  "translation": {
+    "title": {
+      "en": "Top Importers",
+      "es": "Clasificación de Importadores",
+      "pt": "Ranking dos Importadores"
+    },
+    "value": {
+      "en": "FOB (USD)",
+      "es": "FOB (USD)",
+      "pt": "FOB (USD)"
+    },
+    "others": {
+      "en": "OTHERS",
+      "es": "OTROS",
+      "pt": "OUTROS"
+    },
+    "header1": {
+      "en": "Position",
+      "es": "Posición",
+      "pt": "Posição"
+    },
+    "header2": {
+      "en": "Companies",
+      "es": "Empresas",
+      "pt": "Empresas"
+    },
+    "header3": {
+      "en": "FOB (USD)",
+      "es": "FOB (USD)",
+      "pt": "FOB (USD)"
+    },
+    "header4": {
+      "en": "FOB Share",
+      "es": "Participación de FOB",
+      "pt": "Share de FOB"
+    },
+    "records": {
+      "en": "FOB Share",
+      "es": "Participación de FOB",
+      "pt": "Share de FOB"
+    },
+    "seeMore": {
+      "en": "View more",
+      "es": "Ver más",
+      "pt": "Ver mais"
+    },
+    "subtitle": {
+      "en": "Importers with the highest value FOB (USD) for your search",
+      "es": "Importadores con mayor valor FOB (USD) para su búsqueda",
+      "pt": "Importadores com maior valor FOB (USD) para sua pesquisa"
+    },
+    "tooltip_1": {
+      "en": "Regarding the applied filter",
+      "es": "Respecto al filtro aplicado",
+      "pt": "Em relação ao filtro aplicado"
+    },
+    "tooltip_4": {
+      "en": "Regarding the applied filter",
+      "es": "Respecto al filtro aplicado",
+      "pt": "Em relação ao filtro aplicado"
+    },
+    "firstColumn": {
+      "en": "Weight: ",
+      "es": "Peso: ",
+      "pt": "Peso: "
+    },
+    "othersAction": {
+      "en": "Hide",
+      "es": "Ocultar",
+      "pt": "Recolher"
+    },
+    "secondColumn": {
+      "en": "Weight Share: ",
+      "es": "Participación de Peso: ",
+      "pt": "Share de Peso: "
+    },
+    "othersMainLabel": {
+      "en": "Others",
+      "es": "Otros",
+      "pt": "Outros"
+    },
+    "cardActionButton": {
+      "en": "Hide",
+      "es": "Ocultar",
+      "pt": "Recolher"
+    }
+  },
+  "aggregate_by": [
+    {
+      "field": "permit_aggregated.clave.keyword",
+      "order_by": {
+        "permit_aggregated.value": "desc"
+      },
+      "aggregation": "terms"
+    }
+  ],
+  "columnsWidth": [
+    15,
+    45,
+    20,
+    20
+  ],
+  "reorderFields": {
+    "field": "fieldName",
+    "aggregation": "__sort"
+  },
+  "torettoFields": {
+    "dynamic_calc_1": [
+      "sum",
+      "count"
+    ],
+    "dynamic_field_1": "permit_aggregated.value",
+    "dynamic_groupby_1": "permit_aggregated.clave"
+  },
+  "customerRanking": true,
+  "hideChartByPlan": true,
+  "chart_properties": {
+    "grouping": [
+      "permit_aggregated.clave"
+    ],
+    "aggregation": [
+      "permit_aggregated.value"
+    ]
+  },
+  "full_list_params": {
+    "enable": true,
+    "hasTextFilter": true,
+    "hasRangeFilter": true,
+    "textFilterParams": {
+      "groupBy": "permit_aggregated.clave",
+      "ruleType": "prefix",
+      "aggregateBy": "permit_aggregated.value",
+      "placeholder": {
+        "en": "Search for...",
+        "es": "Buscar por...",
+        "pt": "Buscar Por..."
+      },
+      "overrideSize": 100000
+    },
+    "rangeFilterParams": {
+      "title": {
+        "en": "Total of FOB",
+        "es": "Total de FOB",
+        "pt": "Total de FOB"
+      },
+      "groupBy": "permit_aggregated.clave",
+      "ruleType": "range",
+      "aggregateBy": "permit_aggregated.value",
+      "overrideSize": 100000
+    }
+  },
+  "checkboxSelection": true,
+  "openProfileColumn": "permit_aggregated.clave",
+  "useBackendFilters": true,
+  "displayedItemsSize": 11,
+  "chart_bind_processors": {
+    "full_list_column_4": "includes/end/%",
+    "additional_info_value_2": "includes/end/%",
+    "others_additional_info_value_2": "includes/end/%"
+  },
+  "showNotInformedDocuments": false,
+  "displayedItemsSizePieChart": 10,
+  "showCountsResultPercentage": true,
+  "displayedItemsSizeLineChart": 10
+}

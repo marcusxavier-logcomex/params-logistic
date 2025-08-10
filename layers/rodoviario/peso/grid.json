@@ -1,6 +1,7 @@
 [
   {
     "grid": {
+      "h": 0,
       "w": 6,
       "x": 0,
       "y": 0
@@ -11,10 +12,54 @@
   },
   {
     "grid": {
-      "h": 3,
+      "h": 1,
       "w": 6,
       "x": 0,
       "y": 1
+    },
+    "chart_id": "2686",
+    "cellHeight": "150px",
+    "chart_type_name": "BoardChartPercentage"
+  },
+  {
+    "grid": {
+      "h": 2,
+      "w": 6,
+      "x": 6,
+      "y": 3
+    },
+    "chart_id": "2705",
+    "cellHeight": "350px",
+    "chart_type_name": "ResumeChart"
+  },
+  {
+    "grid": {
+      "h": 3,
+      "w": 12,
+      "x": 0,
+      "y": 3
+    },
+    "chart_id": "2729",
+    "cellHeight": "200px",
+    "chart_type_name": "HorizontalBarChart"
+  },
+  {
+    "grid": {
+      "h": 2,
+      "w": 12,
+      "x": 0,
+      "y": 6
+    },
+    "chart_id": "2450",
+    "cellHeight": "400px",
+    "chart_type_name": "RouteChart"
+  },
+  {
+    "grid": {
+      "h": 3,
+      "w": 6,
+      "x": 0,
+      "y": 8
     },
     "chart_id": "2446",
     "cellHeight": "600px",
@@ -24,10 +69,21 @@
     "grid": {
       "h": 3,
       "w": 6,
-      "x": 0,
-      "y": 4
+      "x": 6,
+      "y": 8
     },
-    "chart_id": "2437",
+    "chart_id": "2727",
+    "cellHeight": "600px",
+    "chart_type_name": "DateLineChart"
+  },
+  {
+    "grid": {
+      "h": 3,
+      "w": 6,
+      "x": 0,
+      "y": 11
+    },
+    "chart_id": "2715",
     "cellHeight": "600px",
     "chart_type_name": "LineChart"
   },
@@ -36,21 +92,54 @@
       "h": 3,
       "w": 6,
       "x": 6,
-      "y": 4
+      "y": 11
     },
-    "chart_id": "2442",
+    "chart_id": "2716",
     "cellHeight": "600px",
     "chart_type_name": "DateLineChart"
   },
   {
     "grid": {
-      "h": 1,
+      "h": 3,
       "w": 12,
       "x": 0,
-      "y": 7
+      "y": 14
     },
-    "chart_id": "2450",
-    "cellHeight": "420px",
-    "chart_type_name": "RouteChart"
+    "chart_id": "2719",
+    "cellHeight": "600px",
+    "chart_type_name": "HeatMap"
+  },
+  {
+    "grid": {
+      "h": 3,
+      "w": 6,
+      "x": 0,
+      "y": 17
+    },
+    "chart_id": "2714",
+    "cellHeight": "600px",
+    "chart_type_name": "HorizontalBarChart"
+  },
+  {
+    "grid": {
+      "h": 3,
+      "w": 6,
+      "x": 6,
+      "y": 17
+    },
+    "chart_id": "2717",
+    "cellHeight": "600px",
+    "chart_type_name": "DateLineChart"
+  },
+  {
+    "grid": {
+      "h": 2,
+      "w": 12,
+      "x": 0,
+      "y": 20
+    },
+    "chart_id": "2718",
+    "cellHeight": "400px",
+    "chart_type_name": "AnnualLineChartV2"
   }
 ]
