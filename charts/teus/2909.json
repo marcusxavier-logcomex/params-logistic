@@ -1,0 +1,148 @@
+{
+  "fields": [
+    "supplier_name",
+    "teus_qty",
+    "buyer_seller_country",
+    "importer_name"
+  ],
+  "group_by": [
+    {
+      "field": "supplier_name.keyword",
+      "aggregation": "terms",
+      "max_results": 5,
+      "group_by": [
+        {
+          "field": "teus_qty",
+          "aggregation": "sum"
+        },
+        {
+            "field": "buyer_seller_country.keyword",
+            "aggregation": "terms",
+            "max_results": 1
+        }
+      ]
+    }
+  ],
+  "per_page": 100,
+  "formatter": {
+    "type": "currency",
+    "showFractionalDigits": false,
+    "fractionalDigitsLength": 2
+  },
+  "chart_bind": {
+    "column_1": "data/position",
+    "column_2": "data/importer_name",
+    "column_3": "data/supplier_name",
+    "column_4": "data/count__sum",
+    "column_5": "data/buyer_seller_country",
+    "header_1": "translation/header1",
+    "header_2": "translation/header2",
+    "header_3": "translation/header3",
+    "header_4": "translation/header4",
+    "header_5": "translation/header5"
+  },
+  "shard_size": 100,
+  "max_results": 5,
+  "quickFilter": {
+    "supplier_name": {
+      "enabled": "true",
+      "bindFilter": {
+        "en": "importer_name",
+        "es": "importer_name",
+        "pt": "importer_name"
+      },
+      "translation": {
+        "question_add": {
+          "en": "Would you like to filter by possible importer [BIND_FIELD_VALUE]?",
+          "es": "¿Le gustaría filtrar por el posible supplier_name [BIND_FIELD_VALUE]?",
+          "pt": "Você gostaria de filtrar pelo provável supplier_name [BIND_FIELD_VALUE]?"
+        },
+        "observation_add": {
+          "en": "A new query will be applied",
+          "es": "Se aplicará una nueva consulta",
+          "pt": "Uma nova consulta será aplicada"
+        },
+        "question_remove": {
+          "en": "Would you like to remove the filter by possible importer [BIND_FIELD_VALUE]?",
+          "es": "¿Le gustaría eliminar el filtro por el posible supplier_name [BIND_FIELD_VALUE]?",
+          "pt": "Você gostaria de remover o filtro pelo provável supplier_name [BIND_FIELD_VALUE]?"
+        },
+        "observation_remove": {
+          "en": "A new query will be applied",
+          "es": "Se aplicará una nueva consulta",
+          "pt": "Uma nova consulta será aplicada"
+        }
+      },
+      "dynamicTarget": "full_list_column_2"
+    }
+  },
+  "translation": {
+    "title": {
+      "en": "Top Importers by FOB (USD)",
+      "es": "Principales importadores del mercado, por FOB (USD)",
+      "pt": "Principales importadores do mercado, por FOB (USD)"
+    },
+    "header1": {
+      "en": "Position",
+      "es": "Posición",
+      "pt": "Posição"
+    },
+    "header2": {
+      "en": "Importer Name",
+      "es": "Nombre Importador",
+      "pt": "Nome Importador"
+    },
+    "header3": {
+      "en": "Exporter Name",
+      "es": "Nombre Exportador",
+      "pt": "Nome Exportador"
+    },
+    "header4": {
+      "en": "FOB (USD)",
+      "es": "FOB (USD)",
+      "pt": "FOB (USD)"
+    },
+    "header5": {
+      "en": "Buyer/Seller Country",
+      "es": "País de Procedimiento",
+      "pt": "País de Procedência"
+    },
+    "seeMore": {
+      "en": "View more",
+      "es": "Ver más",
+      "pt": "Ver mais"
+    },
+    "subtitle": {
+      "en": "Visualize strategic connections between importers and exporters, organized by totals, according to the search parameter.",
+      "es": "Visualiza conexiones estratégicas entre importadores y exportadores, organizadas por totales, de acuerdo con el parámetro de su búsqueda.",
+      "pt": "Visualize conexões estratégicas entre importadores e exportadores, organizadas por totais, de acordo com o parâmetro de sua pesquisa."
+    }
+  },
+  "aggregate_by": [
+    {
+      "field": "importer_name.keyword",
+      "order_by": {
+        "teus_qty": "desc"
+      },
+      "aggregation": "terms"
+    }
+  ],
+  "reorderFields": {
+    "field": "fieldName",
+    "aggregation": "__sort"
+  },
+  "torettoFields": {
+    "dynamic_calc_1": [
+      "sum",
+      "count"
+    ],
+    "dynamic_field_1": "teus_qty",
+    "dynamic_groupby_1": [
+      "importer_name",
+      "supplier_name",
+      "buyer_seller_country"
+    ]
+  },
+  "displayedItemsSize": 5,
+  "hasPosition": true
+}
