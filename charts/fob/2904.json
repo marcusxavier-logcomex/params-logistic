@@ -7,7 +7,7 @@
   ],
   "group_by": [
     {
-      "field": "importer_name.keyword",
+      "field": "supplier_name.keyword",
       "aggregation": "terms",
       "max_results": 5,
       "group_by": [
@@ -31,52 +31,25 @@
   },
   "chart_bind": {
     "column_1": "data/position",
-    "column_2": "data/supplier_name",
-    "column_3": "data/count__sum",
-    "column_4": "data/buyer_seller_country",
-    "footer_1": "summary/remaining/count__sum__percentage",
-    "footer_2": "translation/otherRoutes",
+    "column_2": "data/importer_name",
+    "column_3": "data/supplier_name",
+    "column_4": "data/count__sum",
+    "column_5": "data/buyer_seller_country",
     "header_1": "translation/header1",
     "header_2": "translation/header2",
     "header_3": "translation/header3",
     "header_4": "translation/header4",
-    "others_action": "translation/seeMore",
-    "full_list_column_1": "data/position",
-    "full_list_column_2": "data/supplier_name",
-    "full_list_column_3": "data/count__sum",
-    "full_list_column_4": "data/buyer_seller_country",
-    "full_list_header_1": "translation/header1",
-    "full_list_header_2": "translation/header2",
-    "full_list_header_3": "translation/header3",
-    "full_list_header_4": "translation/header4",
-    "full_list_tooltip_1": "translation/tooltip_1",
-    "column_1_tooltipLabel": "translation/embarques",
-    "column_1_tooltipValue": "data/count__sum",
-    "footer_1_tooltipLabel": "translation/footerLabel",
-    "footer_1_tooltipValue": "summary/remaining/count__sum",
-    "full_list_1_tooltipLabel": "translation/footerLabel",
-    "full_list_1_tooltipValue": "summary/remaining/count__sum"
+    "header_5": "translation/header5"
   },
   "shard_size": 100,
-  "treatItems": {
-    "hideShare": [
-      "NO INFORMADO"
-    ],
-    "moveToEnd": [
-      "NO INFORMADO"
-    ],
-    "hideProgressLine": [
-      "NO INFORMADO"
-    ]
-  },
   "max_results": 5,
   "quickFilter": {
     "supplier_name": {
       "enabled": "true",
       "bindFilter": {
-        "en": "supplier_name",
-        "es": "supplier_name",
-        "pt": "supplier_name"
+        "en": "importer_name",
+        "es": "importer_name",
+        "pt": "importer_name"
       },
       "translation": {
         "question_add": {
@@ -105,19 +78,9 @@
   },
   "translation": {
     "title": {
-      "en": "Top Importers",
-      "es": "Clasificación de Importadores",
-      "pt": "Ranking dos Importadores"
-    },
-    "value": {
-      "en": "FOB (USD)",
-      "es": "FOB (USD)",
-      "pt": "FOB (USD)"
-    },
-    "others": {
-      "en": "OTHERS",
-      "es": "OTROS",
-      "pt": "OUTROS"
+      "en": "Top Importers by FOB (USD)",
+      "es": "Principales importadores del mercado, por FOB (USD)",
+      "pt": "Principales importadores do mercado, por FOB (USD)"
     },
     "header1": {
       "en": "Position",
@@ -125,19 +88,24 @@
       "pt": "Posição"
     },
     "header2": {
+      "en": "Importer Name",
+      "es": "Nombre Importador",
+      "pt": "Nome Importador"
+    },
+    "header3": {
       "en": "Exporter Name",
       "es": "Nombre Exportador",
       "pt": "Nome Exportador"
     },
-    "header3": {
+    "header4": {
       "en": "FOB (USD)",
       "es": "FOB (USD)",
       "pt": "FOB (USD)"
     },
-    "header4": {
-      "en": "",
-      "es": "",
-      "pt": ""
+    "header5": {
+      "en": "Buyer/Seller Country",
+      "es": "País de Procedimiento",
+      "pt": "País de Procedência"
     },
     "seeMore": {
       "en": "View more",
@@ -145,40 +113,19 @@
       "pt": "Ver mais"
     },
     "subtitle": {
-      "en": "Exporters with the highest FOB (USD) value for your search",
-      "es": "Exportadores con mayor valor FOB (USD) para su búsqueda",
-      "pt": "Exportadores com maior valor FOB (USD) para sua pesquisa"
-    },
-    "tooltip_1": {
-      "en": "Regarding the applied filter",
-      "es": "Respecto al filtro aplicado",
-      "pt": "Em relação ao filtro aplicado"
-    },
-    "tooltip_4": {
-      "en": "Regarding the applied filter",
-      "es": "Respecto al filtro aplicado",
-      "pt": "Em relação ao filtro aplicado"
-    },
-    "othersAction": {
-      "en": "Hide",
-      "es": "Ocultar",
-      "pt": "Recolher"
+      "en": "Visualize strategic connections between importers and exporters, organized by totals, according to the search parameter.",
+      "es": "Visualiza conexiones estratégicas entre importadores y exportadores, organizadas por totales, de acuerdo con el parámetro de su búsqueda.",
+      "pt": "Visualize conexões estratégicas entre importadores e exportadores, organizadas por totais, de acordo com o parâmetro de sua pesquisa."
     }
   },
   "aggregate_by": [
     {
-      "field": "supplier_name.keyword",
+      "field": "importer_name.keyword",
       "order_by": {
         "departure_goods_usd_value": "desc"
       },
       "aggregation": "terms"
     }
-  ],
-  "columnsWidth": [
-    15,
-    45,
-    20,
-    20
   ],
   "reorderFields": {
     "field": "fieldName",
@@ -191,8 +138,8 @@
     ],
     "dynamic_field_1": "departure_goods_usd_value",
     "dynamic_groupby_1": [
-      "supplier_name",
       "importer_name",
+      "supplier_name",
       "buyer_seller_country"
     ]
   },
